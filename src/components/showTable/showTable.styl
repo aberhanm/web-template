@@ -1,0 +1,18 @@
+// show-table
+@import '~@/style/var.styl'
+@import '~@/style/mixin.styl'
+
+$cname = $name + '-showTable'
+
+.{$cname}
+  table
+    border-collapse: collapse
+    width: 100%
+    td
+      height: 30px
+      line-height: 30px
+      border: 1px solid $colorBorder1
+      padding: 0 5px
+      &:nth-of-type(2n+1)
+        background-color: $colorBGWhite
+        text-align: right

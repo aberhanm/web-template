@@ -1,0 +1,47 @@
+{
+  "name": "yourself-productName",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "vue-cli-service serve",
+    "build": "vue-cli-service build",
+    "lint": "vue-cli-service lint",
+    "yapi": "node ./build/ts.yapi.js",
+    "yapi-all": "node ./build/yapi.all.js",
+    "lint-staged": "lint-staged"
+  },
+  "dependencies": {
+    "axios": "^0.19.0",
+    "core-js": "^3.4.4",
+    "element-ui": "^2.12.0",
+    "lodash": "^4.17.15",
+    "vue": "^2.6.10",
+    "vue-router": "^3.1.3",
+    "vuex": "^3.1.3"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.138",
+    "@vue/cli-plugin-babel": "^4.1.0",
+    "@vue/cli-plugin-typescript": "^4.1.0",
+    "@vue/cli-service": "^4.1.0",
+    "hard-source-webpack-plugin": "^0.13.1",
+    "lint-staged": "^9.5.0",
+    "stylus": "^0.54.7",
+    "stylus-loader": "^3.0.2",
+    "typescript": "~3.5.3",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "gitHooks": {
+    "pre-commit": "npm run lint-staged"
+  },
+  "lint-staged": {
+    "*.ts": [
+      "vue-cli-service lint",
+      "git add"
+    ],
+    "*.vue": [
+      "vue-cli-service lint",
+      "git add"
+    ]
+  }
+}

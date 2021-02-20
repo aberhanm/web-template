@@ -1,0 +1,25 @@
+.totalSize
+  width: 100%
+  height: 100%
+// margin,padding相关的类
+for size,index in $sizeNames
+  .margin{size}
+    margin: $sizeList[index]
+  .padding{size}
+    padding: $sizeList[index]
+  for pos in $rectNames
+    .margin{size}-{pos}
+      margin-{pos}: $sizeList[index]
+    .padding{size}-{pos}
+      padding-{pos}: $sizeList[index]
+// color类
+for name,index in $colorNames
+  .color-{name}
+    color: $colorList[index]
+// boeder位置相关
+.border-normal
+  border: 1px solid $colorBorder1;
+  border-radius: 3px;
+for pos in $rectNames
+  .border-{pos}
+    border-{pos}: 1px solid $colorBorder1;

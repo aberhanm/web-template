@@ -1,0 +1,109 @@
+@import '~@/style/var.styl'
+@import '~@/style/mixin.styl'
+
+$cname = $name + '-form'
+
+.{$cname}
+  position relative
+  display: flex
+  .claim-card
+    margin-bottom: 5px
+    .{$cname}-title
+      border: none
+      padding: 0
+      color: inherit
+      margin: 0
+  .claim-form-append
+    align-self: flex-start
+    display: flex
+    margin-top: 2px
+    .el-button
+      height: 30px
+      align-self: flex-end;
+      margin-bottom: 3px;
+  .el-date-editor
+    .el-input__inner
+      padding-right: 10px
+  .el-form--inline
+    display: flex
+    flex-wrap: wrap;
+    width: 100%;
+    .el-checkbox-group
+      display: flex;
+      flex-wrap: wrap;
+    .el-form-item__label
+      line-height: 1
+      display: flex;
+      align-items: center
+      justify-content: flex-end
+      flex-shrink: 0;
+    .{$cname}-item
+      display: inline-block;
+    .el-form-item
+      margin-right 0px
+      display: flex
+      margin-bottom: 2px
+      &.is-error
+        margin-bottom: 18px
+      .el-form-item__content
+        flex: 1
+        padding-right: 10px
+  .el-input-group--append .el-input__inner, .el-input-group__prepend
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+  .el-input-group__append
+    background-color: transparent;
+    border: none;
+    text-align: center;
+    color: $colorMain;
+    font-size: 12px
+  .el-input__suffix
+    transition: none
+.{$cname}-title
+  font-size: 16px
+  border: 1px solid $colorBorder1
+  border-radius: 5px;
+  padding: 5px;
+  color: $colorBlue;
+  width: 100%
+  margin: 5px 0;
+  // &:after
+  //   content: ''
+  //   display: block
+  //   margin-top: 8px
+  //   left: 0
+  //   right: 0
+  //   position: absolute
+  //   border-bottom: 1px solid $colorBorder1
+.{$cname}-daterange
+  display: flex
+  .el-date-editor.el-input, .el-date-editor.el-input__inner
+    width: auto
+.{$cname}-group
+  width: 100%
+  margin-bottom: 5px
+.{$cname}-group_content
+  display: flex;
+  flex-wrap: wrap;
+// 纯展示的样式
+.{$cname}.showonly
+  .el-input.is-disabled .el-input__inner,
+  .el-checkbox__input.is-disabled+span.el-checkbox__label,
+  .el-textarea.is-disabled .el-textarea__inner,
+  .el-radio__input.is-disabled+span.el-radio__label
+    color: #606266
+  .el-switch.is-disabled
+    opacity: 0.8
+  .el-checkbox__input.is-disabled.is-checked .el-checkbox__inner::after
+    border-color: #606266
+  .el-checkbox__input.is-disabled.is-indeterminate .el-checkbox__inner::before
+    background-color: #606266
+.{$cname}-adddress
+  display: flex;
+  .el-select
+    margin-right 5px
+
+.{$cname}-dateforever
+  display: flex
+  .el-checkbox
+    margin-left: 15px

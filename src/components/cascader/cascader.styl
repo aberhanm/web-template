@@ -1,0 +1,14 @@
+@import '~@/style/var.styl'
+@import '~@/style/mixin.styl'
+
+$cname = $name + '-cascader'
+
+.{$cname}
+  display: flex
+.{$cname}-item
+  flex: 1
+  margin-right 5px
+  &:last-child
+    margin-right 0px
+  .el-select
+    width 100%
